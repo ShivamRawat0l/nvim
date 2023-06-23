@@ -45,7 +45,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 -- Custom Remaps
-vim.keymap.set({ "n", "i" }, "<C-s>", "<leader>f<Esc>:w<CR>", { expr = false, silent = true, noremap = false, remap = true })
+vim.keymap.set({ "n", "i" }, "<C-s>", "<Esc><leader>f:w<CR>",
+    { expr = false, silent = true, noremap = false, remap = true })
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
