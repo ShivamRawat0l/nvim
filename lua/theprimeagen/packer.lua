@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
         "folke/trouble.nvim",
         config = function()
             require("trouble").setup {
-                icons = false,
+                icons = true,
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 -- refer to the configuration section below
@@ -54,7 +54,7 @@ return require('packer').startup(function(use)
     use("nvim-treesitter/nvim-treesitter-context");
 
     use {
-        'VonHeikemen/lsp-zero.nvim',
+        'VonHeikemen/lsfalsep-zero.nvim',
         branch = 'v1.x',
         requires = {
             -- LSP Support
@@ -88,4 +88,16 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
     use("norcalli/nvim-colorizer.lua")
+    use("ggandor/leap.nvim")
+    use 'nvim-tree/nvim-web-devicons'
+    use {
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                -- config
+            }
+        end,
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
 end)
