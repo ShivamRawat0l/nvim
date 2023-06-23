@@ -54,7 +54,7 @@ return require('packer').startup(function(use)
     use("nvim-treesitter/nvim-treesitter-context");
 
     use {
-        'VonHeikemen/lsfalsep-zero.nvim',
+        'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
         requires = {
             -- LSP Support
@@ -99,5 +99,9 @@ return require('packer').startup(function(use)
             }
         end,
         requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+    use {
+        'stevearc/oil.nvim',
+        config = function() require('oil').setup() end
     }
 end)
