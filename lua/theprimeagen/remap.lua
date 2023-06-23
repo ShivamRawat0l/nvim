@@ -31,6 +31,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -43,8 +44,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
-vim.keymap.set("", "<C-s>", "<Esc>:w<CR>", { silent = true })
+-- Custom Remaps
+vim.keymap.set({ "n", "i" }, "<C-s>", "<leader>f<Esc>:w<CR>", { expr = false, silent = true, noremap = false, remap = true })
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
