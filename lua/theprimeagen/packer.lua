@@ -104,4 +104,11 @@ return require('packer').startup(function(use)
         'stevearc/oil.nvim',
         config = function() require('oil').setup() end
     }
+    use({
+        'Wansmer/treesj',
+        requires = { 'nvim-treesitter' },
+        config = function()
+            require('treesj').setup({ --[[ your config ]] })
+        end,
+    })
 end)

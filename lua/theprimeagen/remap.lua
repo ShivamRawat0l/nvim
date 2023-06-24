@@ -54,6 +54,13 @@ vim.keymap.set("n", "t4", ":tabmove 4<CR>", { silent = true })
 vim.keymap.set({ "n", "i" }, "<C-s>", "<Esc><leader>f:w<CR>",
     { expr = false, silent = true, noremap = false, remap = true })
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+-- For use default preset and it work with dot
+vim.keymap.set('n', 'zj', require('treesj').join)
+vim.keymap.set('n', 'zg', require('treesj').toggle)
+vim.keymap.set('n', 'zs', require('treesj').split)
+-- For extending default preset with `recursive = true`, but this doesn't work with dot
+
+
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
