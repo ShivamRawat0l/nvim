@@ -1,4 +1,4 @@
-#vim.opt.guicursor = ""
+vim.opt.guicursor = ""
 
 vim.opt.smartindent = true
 vim.opt.autoindent = true
