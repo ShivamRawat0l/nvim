@@ -25,27 +25,6 @@ return require('packer').startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
     -- Themes
     --
-    use {
-        'xbase-lab/xbase',
-        run = 'make install', -- or "make install && make free_space" (not recommended, longer build time)
-        requires = {
-            "neovim/nvim-lspconfig",
-            -- "nvim-telescope/telescope.nvim", -- optional
-            -- "nvim-lua/plenary.nvim", -- optional/requirement of telescope.nvim
-            -- "stevearc/dressing.nvim", -- optional (in case you don't use telescope but something else)
-        },
-        config = function()
-            require 'xbase'.setup({
-                mappings = {
-                    enable = false
-                }
-            }) -- see default configuration bellow
-        end
-    }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
 
     use({
         "folke/trouble.nvim",
@@ -76,7 +55,7 @@ return require('packer').startup(function(use)
 
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+        branch = 'v3.x',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
@@ -133,4 +112,31 @@ return require('packer').startup(function(use)
         end,
     })
     use { 'f-person/git-blame.nvim' }
+    -- Added on 14th Jan 2022
+    use {
+        'mrcjkb/rustaceanvim',
+        version = '^3', -- Recommended
+        ft = { 'rust' },
+    }
+    use {
+        'xbase-lab/xbase',
+        run = 'make install', -- or "make install && make free_space" (not recommended, longer build time)
+        requires = {
+            "neovim/nvim-lspconfig",
+            -- "nvim-telescope/telescope.nvim", -- optional
+            -- "nvim-lua/plenary.nvim", -- optional/requirement of telescope.nvim
+            -- "stevearc/dressing.nvim", -- optional (in case you don't use telescope but something else)
+        },
+        config = function()
+            require 'xbase'.setup({
+                mappings = {
+                    enable = false
+                }
+            }) -- see default configuration bellow
+        end
+    }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
