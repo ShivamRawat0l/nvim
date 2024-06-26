@@ -1,4 +1,7 @@
-require("oil").setup({
+return {
+    'stevearc/oil.nvim',
+    config = function() 
+        require('oil').setup({
     columns = {
         "icon",
     },
@@ -81,3 +84,7 @@ require("oil").setup({
         },
     },
 })
+vim.keymap.set("n", "<leader>pv", require("oil").open)
+vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+ end
+}
