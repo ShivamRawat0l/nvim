@@ -1,6 +1,15 @@
 ### ThePrimeagen's init.lua
 Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
-
+<details open>
+<summary>Want to ruin the surprise?</summary>
+  <details open>
+<summary>Want to ruin the surprise?</summary>
+<br>
+Well, you asked for it!
+</details>
+<br>
+Well, you asked for it!
+</details>
 [The full video of me setting up this repo](https://www.youtube.com/watch?v=w7i4amO_zaE)
 
 For anyone that is interested in my vimrc, i will have a commit log below
