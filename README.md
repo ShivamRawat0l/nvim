@@ -1,11 +1,11 @@
 ### ThePrimeagen's init.lua
 Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 <details open>
-<summary>Want to ruin the surprise?</summary>
+<summary>API/</summary>
   <details open>
-<summary>Want to ruin the surprise?</summary>
+      <summary>Details/?</summary>
 <br>
-Well, you asked for it!
+ APP.tsx
 </details>
 <br>
 Well, you asked for it!
