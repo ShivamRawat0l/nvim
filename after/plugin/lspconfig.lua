@@ -1,7 +1,5 @@
 local lsp_conf = require 'lspconfig'
 
-lsp_conf.sourcekit.setup {}
-
 lsp_conf.rust_analyzer.setup {
     -- Other setup stuff
     -- ...

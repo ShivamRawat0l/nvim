@@ -21,7 +21,7 @@ require("oil").setup({
     skip_confirm_for_simple_edits = false,
     delete_to_trash = false,
     trash_command = "trash-put",
-    prompt_save_on_select_new_entry = true,
+    prompt_save_on_select_new_entry = false,
     keymaps = {
         ["g?"] = "actions.show_help",
         ["<CR>"] = "actions.select",
